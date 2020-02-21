@@ -119,13 +119,13 @@ width: 100%;
 padding-right: 10px;
 }
 
-@media screen and (min-width: 730px) and (max-width: 1280px) { 
+@media screen and (min-width: 750px) and (max-width: 1280px) { 
 aside {width: 95%; float: left;}
 .content {width: 95%;} 
 .content_img img{width: 100%; padding-right: 1%; padding-left: 1%;}
 .list li a{width: 100px; height: 30px;} 
 }
-@media screen and (min-width: 600px) and (max-width: 730px) {
+@media screen and (min-width: 600px) and (max-width: 750px) {
 aside { width: 95%; float: left;}
 .content {width: 95%;} 
 .content_img img{width: 100%; padding-right: 1%; padding-left: 1%;}
