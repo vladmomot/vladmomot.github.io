@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Моє Резюме</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="style1.css"/>
+</head>
+<body>
+<h1> <b>Резюме студента:</b> </h1>
+<img class = "myfoto" src="image/1.jpg"  alt="Моє фото">
+<br/>
+<h2><b>Момот Владислав Ігорович</b></h2>
+<br/>
+<h2><b>Дата народження: <i><u>28.02.2002</u></i></b></h2>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<h3><b>Освіта:</b></h3>
+<ul>
+<li><p> Енергодарський Навчально-виховний комплекс №5 (повна середня)</p></li>
+<li><p> Національний університет "Запорізька Політехніка" (вища)</p></li>
+</ul>
+<br/>
+<br/>
+<h3><b>Професійні навички: </b></h3>
+<ol>
+<li><p>Программування на мові <b>С/С++</b> (Об`єктно-оріентоване)</p></li>
+<li><p>Знання мови розмітки <b>HTML</b> та <b>СSS</b>, програмування на мові <b>Javasсript</b></p></li>
+<li><p>Вміння працювати  з базами даних</p></li>
+<li><p><a target="blank" href="table1.html">Я вмію робити таблиці!</a></p></li>
+</ol>
+<br/>
+<br/>
+<h3><b>Хобі:</b></h3>
+<ul type="square">
+<li><p>Електротехніка та електроніка(робототехніка)</p></li>
+<li><p><b>Спорт: </b> Волейбол, Теніс</p></li>
+</ul>
+<br/>
+<br/>
+<p><b>Телефон: </b><i><a href="tel:+380507604523">+380507604523</a></i></p> 
+<p><b>Email: </b><i><a href="mailto:momotv678@gmail.com">momotv678@gmail.com</a></i></p>
+<p class = "a">
+ <a target="blank" href="https://vk.com/id272917080"><img src="image/vk.png" 
+  width="60" height="60" alt="вконтакте"></a>
+<a target="blank" href="https://teleg.run/vladmomot28"><img src="image/tg.png" 
+  width="60" height="60" alt="телеграм"></a>
+<a target="blank" href="https://github.com/vladmomot"><img src="image/github.png" 
+  width="80" height="60" alt="гітхаб"></a>
+</p>
+<form id="form_id" onsubmit="javascript:return validate('form_id','name','email','tel',);">
+  <b>Зворотній зв`язок:</b>
+  <p><input name="name" type="text" id="name" placeholder="Введіть ваше им`я"></p>         
+  <p><input name="email" type="text" id="email" placeholder="Введіть ваш email"></p>
+  <p><input name="tel" type="text" id="tel" placeholder="Введіть ваш телефон"></p>
+  <p><textarea name="message" id="test" placeholder="Введіть ваше повідомлення" rows="4" cols="30"></textarea></p>
+  <div id="max-test"></div>
+  <button type="submit">Відправити</button>
+
+
+  <script type="text/javascript">
+   function validate(form_id,name,email,tel) {
+   var reg = /^[a-zA-Zа-яА-ЯёЁІіЇїЄєҐґ']{2,}$/;
+   var address = document.forms[form_id].elements[name].value;
+   if(reg.test(address) == false) {
+      alert('Введіть корректне им`я');
+      return false;
+   }
+   var reg1 = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+   var address1 = document.forms[form_id].elements[email].value;
+   if(reg1.test(address1) == false) {
+      alert('Введіть корректний e-mail');
+      return false;
+   }
+   var reg2 = /^\+[\d]{1,2}\ \([\d]{3}\)\ [\d]{2,3}-[\d]{2,3}-[\d]{2,3}$/;
+   var address2 = document.forms[form_id].elements[tel].value;
+   if(reg2.test(address2) == false) {
+      alert('Введіть корректний телефон');
+      return false;
+   }
+}
+  test.oninput = test.onkeyp = test.onchange = function() {
+  var len = this.value.length;
+  document.getElementById('max-test').innerHTML = 'Число символів:  ' + (len);
+}
+</script>
+</form>
+</body>
+</html>
